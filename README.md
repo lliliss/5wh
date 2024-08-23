@@ -22,12 +22,10 @@ O site é voltado para turistas e moradores locais. Qualquer pessoa interessada 
 O projeto será uma aplicação web, acessível a partir de qualquer navegador web, de acordo com a preferência do usuário.
 
 ## How?
-A aplicação será desenvolvida utilizando Python para o back-end, com o framework Flask para gerenciar a lógica do servidor. Para o front-end, usaremos HTML e CSS para criar uma interface de usuário atraente e funcional.
+A aplicação será desenvolvida utilizando Python para o back-end, com o framework Django para gerenciar a lógica do servidor. Para o front-end, usaremos HTML e CSS para criar uma interface de usuário atraente e funcional.
 
 ## API's utilizadas:
-- Request
 - Google places API
 - Open Weather API
 - Foursquare API
-- Flask-RESTful (extensão do Flask)
 
