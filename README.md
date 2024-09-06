@@ -28,4 +28,10 @@ A aplicação será desenvolvida utilizando Python para o back-end, com o framew
 - Google places API
 - Open Weather API
 - Foursquare API
-
+  
+## Equipe:
+- Alice Ferreira (Back-End)
+- Isabel Melo (Front-End)
+- Pedro Santos (Back-End)
+- Thayná Carnaúba (Back-End)
+- Vlamir Gama (Front-End)
