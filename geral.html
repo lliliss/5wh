@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol de Verão</title>
+    <link rel="stylesheet" href="restaurantes.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Explore os melhores locais e acomodações em Maceió com o Sol de Verão. Encontre restaurantes, hotéis e muito mais.">
+
+    <meta property="og:title" content="Sol de Verão">
+    <meta property="og:description" content="Descubra os melhores lugares para visitar em Maceió.">
+    <meta property="og:image" content="thumbnail.jpg">
+    <meta property="og:url" content="https://seusite.com.br">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sol de Verão">
+    <meta name="twitter:description" content="Explore os melhores locais em Maceió com o Sol de Verão.">
+    <meta name="twitter:image" content="thumbnail.jpg">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="soldeverao.png" alt="Logotipo do Sol de Verão">
+            </a>
+        </div>
+        <div class="user-options">
+            <nav aria-label="Menu de navegação do usuário">
+                <a href="#">Favoritados <i class="fas fa-heart"></i></a>
+                <!-- Removido o redirecionamento para a página de registro -->
+                <button class="login-btn">Registre-se <i class="fas fa-user-plus"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="tab-navigation">
+        <ul class="container tabs-navigation">
+            <li class="tab" onclick="window.location.href='index.html'">Home</li>
+            <li class="tab" onclick="window.location.href='geral.html'">Geral</li>
+            <li class="tab" onclick="window.location.href='hoteis.html'">Hotéis</li>
+            <li class="tab active" data-tab="restaurantes">Restaurantes</li>
+        </ul>
+    </nav>
+    
+
+    <main class="main-content">
+        <aside class="filters">
+            <button aria-controls="filter-options" aria-expanded="false" onclick="toggleFilters()">Filtros <i class="fas fa-filter"></i></button>
+            <div id="filter-options" class="hidden">
+                <form action="/filter" method="get">
+                    <label for="location">Localização</label>
+                    <select id="location" name="location">
+                        <option value="maceio">Maceió</option>
+                        <option value="pajucara">Pajuçara</option>
+                        <option value="ponta_verde">Ponta Verde</option>
+                        <option value="jatiuca">Jatiuca</option>
+                    </select>
+                    <label for="price-range">Faixa de Preço</label>
+                    <input type="range" id="price-range" name="price_range" min="0" max="1000" aria-label="Faixa de preço">
+                    <button type="submit">Aplicar Filtros</button>
+                </form>
+            </div>
+            <div id="map" aria-label="Mapa de locais"></div>
+        </aside>
+
+        <section class="locations" aria-label="Lista de locais">
+            <article class="location-card">
+                <img src="janga.jpg" alt="Imagem do Janga Restaurante">
+                <h2>Janga Restaurante</h2>
+                <p>Restaurante Janga, está localizado no Maceió Shopping e na Ponta Verde </p>
+                <a href="janga.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="location-card">
+                <img src="imperadordocamarion.jpg" alt="Imperador dos Camarões">
+                <h2>Imperador dos Camarões</h2>
+                <p>Restaurante Imperador dos camarões, está localizado na Pajuçara.</p>
+                <a href="imperadordoscamaroes.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="location-card">
+                <img src="blackbeer.jpg" alt="Imagem do Black Beer Parrilla">
+                <h2>Black Beer Parrilla</h2>
+                <p>Black Beer Parrilla, está localizada na Jatiúca.</p>
+                <a href="blackbeer.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="location-card">
+                <img src="vero.jpg" alt="Imagem do Vero">
+                <h2>Restaurante Vero</h2>
+                <p>Restaurante Italiano Vero, possui duas unidades, uma localizada na Pajuçara e outra na Ponta Verde.</p>
+                <a href="vero.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="location-card">
+                <img src="kanoa.jpg" alt="Imagem do Kanoa Restaurante">
+                <h2>Kanoa Restaurante</h2>
+                <p>Restaurante com música ao vivo, localizado na orla da Ponta Verde.</p>
+                <a href="kanoa.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="location-card">
+                <img src="lopana.jpg" alt="Imagem do Lopana Restaurante">
+                <h2>Lopana Restaurante</h2>
+                <p>Restaurante com música ao vivo, localizado na orla da Ponta Verde.</p>
+                <a href="lopana.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="location-card">
+                <img src="bali.jpg" alt="Imagem do Bali Sorveteria">
+                <h2>Bali Sorveteria</h2>
+                <p>Sorveteria Bali com várias opções de sorvete, localizada na praia da Pajuçara.</p>
+                <a href="bali.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sol de Verão. Todos os direitos reservados.</p>
+        <nav aria-label="Links de navegação no rodapé">
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
