@@ -80,23 +80,6 @@ header .logo img {
     transform: scale(1.05);
 }
 
-.user-options {
-    display: flex;
-    align-items: center;
-}
-
-.user-options a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #ffA500;
-    font-size: 16px;
-    transition: color 0.3s, font-weight 0.3s;
-}
-
-.user-options a:hover {
-    color: #333;
-    font-weight: bold;
-}
 
 .login-btn {
     padding: 10px 20px;
@@ -107,11 +90,6 @@ header .logo img {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s, transform 0.3s;
-}
-
-.login-btn:hover {
-    background-color: #555;
-    transform: scale(1.05);
 }
 
 .main-content {
@@ -181,31 +159,13 @@ header .logo img {
 }
 
 .filters #map {
-    width: 100%;
-    height: 600px;
-    margin-top: 20px;
-    background: url('mapa.jpg') no-repeat center center;
-    background-size: cover;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s;
-}
-
-.filters #map::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    transition: background 0.3s;
-}
-
-.filters #map:hover::before {
-    background: rgba(0, 0, 0, 0.2);
+    width: 100%;                /* Mantém o mapa responsivo */
+    height: 600px;              /* Altura definida */
+    margin-top: 20px;           /* Margem superior */
+    border-radius: 10px;        /* Cantos arredondados */
+    position: relative;         /* Necessário para ajustar elementos relativos */
+    overflow: hidden;           /* Garante que o conteúdo não vaze */
+    transition: background-color 0.3s; /* Pode ser usado para alterações dinâmicas */
 }
 
 .locations {

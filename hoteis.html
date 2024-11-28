@@ -22,6 +22,7 @@
     <meta name="twitter:image" content="thumbnail.jpg">
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA1UXRBDFF4KET1Ij5XEGTBgIG_OJ1RRU&callback=initMap" async defer></script>
     <script src="scripts.js" defer></script>
 </head>
 
@@ -32,19 +33,13 @@
                 <img src="soldeverao.png" alt="Logotipo do Sol de Verão">
             </a>
         </div>
-        <div class="user-options">
-            <nav aria-label="Menu de navegação do usuário">
-                <a href="#">Favoritados <i class="fas fa-heart"></i></a>
-                <button class="login-btn">Registre-se <i class="fas fa-user-plus"></i></button> <!-- Removido o redirecionamento -->
-            </nav>
-        </div>
+        
     </header>
 
     <!-- Navegação de Abas -->
     <nav class="tab-navigation">
         <ul class="container tabs-navigation">
             <li class="tab" onclick="window.location.href='index.html'">Home</li>
-            <li class="tab" onclick="window.location.href='geral.html'">Geral</li>
             <li class="tab active" data-tab="hoteis">Hotéis</li>
             <li class="tab" onclick="window.location.href='restaurantes.html'">Restaurantes</li>
         </ul>
@@ -62,43 +57,43 @@
             <article class="location-card">
                 <img src="1 HOTEL - vistaMAR.jpg" alt="Imagem do Vista Mar">
                 <h2>Vista Mar</h2>
-                <p>Descrição breve sobre o Vista Mar. Localização, especialidades, etc.</p>
+                <p>Hotel Vista Mar está localizado no coração de Maceió, com unidades no bairro de Ponta Verde e no Maceió Shopping.</p>
                 <a href="vistamar.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
             <article class="location-card">
                 <img src="2 HOTEL - atlanticSuites.jpg" alt="Imagem do Atlantic Suites">
                 <h2>Atlantic Suites</h2>
-                <p>Descrição breve sobre o restaurante Del Mare. Localização, serviços, etc.</p>
+                <p>Atlantic Suites está localizado em Maceió, com unidades na Ponta Verde e próximo ao Maceió Shopping.</p>
                 <a href="atlantticsuites.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
             <article class="location-card">
                 <img src="3 HOTEL - BrisaTower.jpg" alt="Imagem do Brisa Tower">
                 <h2>Black Atlantic Suites</h2>
-                <p>Descrição breve sobre o Black Beer Parrilla. Especialidades, localização, etc.</p>
+                <p>Black Atlantic Suites está localizado em Maceió, com unidades na Praia de Jatiúca e na Ponta Verde.</p>
                 <a href="atlanticsuites.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
             <article class="location-card">
                 <img src="4 HOTEL - ritzSuites.jpg" alt="Imagem do Ritz Suites">
                 <h2>Ritz Suites</h2>
-                <p>Descrição do Hotel Ritz Suites, possui duas unidades, uma localizada na Pajuçara e outra na Ponta Verde.</p>
+                <p>Ritz Suites está localizado em Maceió, com unidades na Praia de Lagoa da Anta e na Ponta Verde.</p>
                 <a href="ritzsuites.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
             <article class="location-card">
                 <img src="5 HOTEL - Meridiano.jpg" alt="Imagem do Meridiano">
                 <h2>Hotel Meridiano</h2>
-                <p>Hotel Meridiano, localizado na orla da Ponta Verde.</p>
+                <p>Meridiano Hotel está localizado em Maceió, com unidades na Praia de Pajuçara e na Ponta Verde.</p>
                 <a href="meridiano.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
             <article class="location-card">
                 <img src="6 HOTEL - MarHotel.jpg" alt="Imagem do Mar Hotel">
                 <h2>Mar Hotel</h2>
-                <p> Descrição do Mar Hotel, localizado na orla da Ponta Verde.</p>
+                <p> Mar Hotel está localizado em Maceió, com unidades na Praia de Jatiúca e na Ponta Verde.</p>
                 <a href="marhotel.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
             <article class="location-card">
                 <img src="7 HOTEL - Preimier.jpg" alt="Imagem do Bali Sorveteria">
                 <h2>Hotel Preimier</h2>
-                <p> Descrição do Hotel premier, localizado na praia da Pajuçara.</p>
+                <p> Hotel Premier está localizado em Maceió, com unidades na Praia de Pajuçara e na região de Ponta Verde.</p>
                 <a href="premier.html" class="details-btn">Ver mais detalhes <i class="fas fa-arrow-right"></i></a>
             </article>
         </section>
@@ -106,14 +101,136 @@
 
     <footer class="footer">
         <p>&copy; 2024 Sol de Verão. Todos os direitos reservados.</p>
-        <nav aria-label="Links de navegação no rodapé">
-            <ul>
-                <li><a href="#">Política de Privacidade</a></li>
-                <li><a href="#">Termos de Uso</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
     </footer>
+
+    <script>
+        function initMap() {
+  
+            var maceio = {lat: -9.654716, lng: -35.709316};
+
+          // Definindo limites de latitude e longitude (exemplo: Maceió, Alagoas)
+          var bounds = {
+            north: -9.6000,  // Limite superior da latitude
+            south: -9.7000,  // Limite inferior da latitude
+            east: -35.6800,   // Limite leste da longitude
+            west: -35.7300    // Limite oeste da longitude
+            };
+          var mapRestaurant = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            minZoom: 12,  // Limite mínimo de zoom
+            maxZoom: 16,  // Limite máximo de zoom 
+            center: maceio,
+            mapId: '404869980cc2508a',
+            mapTypeControl: false,
+            streetViewControl: false,
+            fullscreenControl: false,
+            restriction: {
+                latLngBounds: bounds,  // Restringe a área de navegação
+                strictBounds: true     // Garante que o mapa não ultrapasse os limites definidos
+            }
+          });
+  
+          // Criar infowindow para todos os marcadores
+          var infowindow = new google.maps.InfoWindow({
+            disableAutoPan: true // Impede o mapa de recentralizar ao abrir o infowindow
+          });
+          
+          // Remover botão "X" via CSS
+          google.maps.event.addListener(infowindow, 'domready', function() {
+            const closeButton = document.querySelector('.gm-ui-hover-effect');
+            if (closeButton) {
+              closeButton.style.display = 'none'; // Oculta o botão "X"
+            }
+          });
+  
+          // Função para criar marcadores
+          function createMarker(position, title, labelText, infoContent) {
+            var marker = new google.maps.Marker({
+              position: position,
+              map: mapRestaurant,
+              title: title,
+              icon: {
+                  url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                  labelOrigin: new google.maps.Point(15, 40),
+                  size: new google.maps.Size(32, 32),
+                  anchor: new google.maps.Point(16, 32)
+              },
+              label: {
+                text: labelText,
+                fontWeight: 'bold',
+                fontSize: '15px',
+                color: 'black',
+                backgroundColor: 'transparent'
+              }
+            });
+            
+  
+            // Adicionando evento de mouseover para abrir o infowindow
+            google.maps.event.addListener(marker, 'mouseover', function() {
+              infowindow.setContent(infoContent);
+              infowindow.open(mapRestaurant, marker);
+            });
+  
+            // Adicionando evento de mouseout para fechar o infowindow
+            google.maps.event.addListener(marker, 'mouseout', function() {
+              infowindow.close();
+            });
+  
+            return marker;
+          }
+  
+
+    createMarker(
+          {lat: -9.667746384687023, lng: -35.71395214777947},
+          'Hotel Meridiano',
+          'Hotel Meridiano',
+          '<strong>Hotel Meridiano</strong><br>Av. Dr. Antônio Gouveia, 677 - Pajuçara, 57030-170 <br><br>Ponto de referência: Próximo ao Cheiro da Terra.'
+        );
+
+        createMarker(
+          {lat: -9.66108825177758, lng: -35.69746406335066},
+          'Maceió Mar Hotel',
+          'Maceió Mar Hotel',
+          '<strong>Maceió Mar Hotel</strong><br>Av. Álvaro Otacílio, 2991 - Ponta Verde, 57035-180 <br><br>Ponto de referência: Próximo ao Micale Restaurante.'
+        );
+
+        createMarker(
+          {lat: -9.666292509981858, lng: -35.71258813319713},
+          'Hotel  Best Western Premier Maceio',
+          'Hotel  Best Western Premier Maceio',
+          '<strong>Hotel  Best Western Premier Maceio</strong><br>Av. Dr. Antônio Gouveia, 925 - Pajuçara, 57030-170 <br><br>Ponto de referência: Próximo ao Imperador dos Camarões. '
+        );
+
+        createMarker(
+         {lat: -9.670111486247261,lng: -35.715603676708405},
+          'Hotel VistaMar',
+          'Hotel VistaMar',
+          '<strong>Hotel VistaMar</strong><br>Av. Dr. Antônio Gouveia, 361 - Pajuçara, 57030-170<br><br>Ponto de referência: Próximo ao Cheiro da Terra.'
+        );
+
+        createMarker(
+          {lat: 9.649466795610548, lng: -35.701074161270256},
+          'Hotel Atlantic Suites',
+          'Hotel Atlantic Suites',
+          '<strong>Hotel Atlantic Suites</strong><br> Av. Álvaro Otacílio, 4065 - Jatiúca, 57036-850<br><br>Ponto de referência: Próximo ao Truckzone.'
+        );
+
+        createMarker(
+          {lat: -9.648195117660636, lng:-35.700532017191556},
+          'Hotel Brisa Tower',
+          'Hotel Brisa Tower',
+          '<strong>Hotel Brisa Towe</strong><br>Av. Álvaro Otacílio, 4201 - Jatiúca, 57035-972<br><br>Ponto de referência: Próximo à Barraca do Siri'
+        );
+
+        createMarker(
+          {lat: -9.632273506192572, lng: -35.697324674862166},
+          'Hotel Ritz Suites',
+          'Hotel Ritz Suites',
+          '<strong>Hotel Ritz Suites</strong><br>Av. Brigadeiro Eduardo Gomes de Brito, 125 - Cruz das Almas, 57038-280<br><br>Ponto de referência: Próximo à Praia de Cruz das Almas.'
+        );
+      }
+
+    </script>
 </body>
 
 </html>
