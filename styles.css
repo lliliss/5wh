@@ -25,14 +25,14 @@
 
 /* Centraliza a logo */
 .logo {
-    position: absolute;
+    position: sticky;
     left: 50%;
     transform: translateX(-50%); /* Centraliza a logo horizontalmente */
 }
 
 .logo img {
     display: block;
-    height: 100px; /* Aumenta a altura da logo em 75% */
+    height: 85px; /* Aumenta a altura da logo em 75% */
     width: auto; /* Mantém a proporção da imagem */
     padding: 9px 0;
 }

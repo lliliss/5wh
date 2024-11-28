@@ -43,12 +43,6 @@ header .logo img {
     width: 130px;
     transition: transform 0.3s, filter 0.3s;
 }
-
-header .logo img:hover {
-    transform: rotate(-5deg);
-    filter: brightness(1.1);
-}
-
 .search-bar {
     flex: 1;
     margin: 0 20px;
@@ -190,7 +184,7 @@ header .logo img:hover {
     width: 100%;
     height: 600px;
     margin-top: 20px;
-    background: url('mapa.png') no-repeat center center;
+    background: url('mapa.jpg') no-repeat center center;
     background-size: cover;
     border-radius: 10px;
     position: relative;

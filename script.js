@@ -3,8 +3,9 @@ function redirectToRestaurants() {
     window.location.href = 'restaurantes.html'; // Redireciona para a aba restaurantes
 }
 function redirectTohoteis() {
-    window.location.href = 'hoteis.html'; // Redireciona para a aba de hoteis
+    window.location.href = 'hoteis.html'; // Redireciona para a aba de hotéis
 }
+
 // Seleção de elementos
 const tabs = document.querySelectorAll('.tab');
 const carouselItems = document.querySelectorAll('.carousel-item');
@@ -72,23 +73,3 @@ function nextCarouselItem() {
 // Adiciona eventos de clique nos botões do carrossel
 leftBtn.addEventListener('click', prevCarouselItem);
 rightBtn.addEventListener('click', nextCarouselItem);
-
-// -------------------- Modal de Registro -------------------- //
-
-// Abre o modal ao clicar no botão "Registrar-se"
-document.querySelector('.btn-register').addEventListener('click', function() {
-    document.getElementById('registerModal').style.display = 'block';
-});
-
-// Fecha o modal ao clicar no botão de fechar
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('registerModal').style.display = 'none';
-});
-
-// Fecha o modal ao clicar fora dele
-window.onclick = function(event) {
-    const modal = document.getElementById('registerModal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-};

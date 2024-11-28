@@ -53,19 +53,7 @@
 
     <main class="main-content">
         <aside class="filters">
-            <button aria-controls="filter-options" aria-expanded="false" onclick="toggleFilters()">Filtros <i class="fas fa-filter"></i></button>
-            <div id="filter-options" class="hidden">
-                <form action="/filter" method="get">
-                    <label for="location">Localização</label>
-                    <select id="location" name="location">
-                        <option value="maceio">Maceió</option>
-                        <option value="pajucara">Pajuçara</option>
-                        <option value="ponta_verde">Ponta Verde</option>
-                        <option value="jatiuca">Jatiuca</option>
-                    </select>
-                    <label for="price-range">Faixa de Preço</label>
-                    <input type="range" id="price-range" name="price_range" min="0" max="1000" aria-label="Faixa de preço">
-                    <button type="submit">Aplicar Filtros</button>
+            <button aria-controls="filter-options" aria-expanded="false" onclick="toggleFilters()">Mapa <i class="fas fa-filter"></i></button>
                 </form>
             </div>
             <div id="map" aria-label="Mapa de locais"></div>
