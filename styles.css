@@ -1,0 +1,237 @@
+/* Reset de estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do Container */
+.container {
+    width: 90%; /* Ajusta a largura para 90% da tela */
+    max-width: 1920px; /* Limita a largura a 1920px */
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+
+/* Centraliza a logo */
+.logo {
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a logo horizontalmente */
+}
+
+.logo img {
+    display: block;
+    height: 100%; /* Aumenta a altura da logo em 75% */
+    width: auto; /* Mantém a proporção da imagem */
+    padding: 9px 0;
+}
+
+.search-bar {
+    flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço disponível */
+    display: flex;
+    justify-content: center;
+    margin: 0 40px; /* Aumenta o espaçamento lateral */
+}
+
+.search-bar input {
+    padding: 14px; /* Aumenta o padding para dar mais espaço dentro da barra */
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    width: 500px; /* Aumenta a largura da barra de pesquisa */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+}
+
+.search-bar button {
+    padding: 14px 18px; /* Ajusta o padding do botão */
+    border: none;
+    background-color: #FFA500;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Estilo das Abas de Navegação */
+.tab-navigation {
+    background-color: #FFA500;
+    padding: 15px 0; /* Aumenta o padding para uma seção mais espaçosa */
+}
+
+.tab-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Aumenta o espaçamento entre as abas */
+}
+
+.tab {
+    cursor: pointer;
+    padding: 12px 30px; /* Aumenta o padding */
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover,
+.tab.active {
+    background-color: #ff8c00;
+    border-radius: 5px;
+}
+
+/* Seção Principal (Hero Section) */
+.hero-section {
+    position: relative;
+    height: 500px; /* Aumenta a altura para uma tela maior */
+}
+
+.hero-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('fotoprincipal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo do Carrossel de Destaques */
+.carousel-section {
+    background-color: #f8f8f8;
+    padding: 60px 0; /* Aumenta o padding para dar mais espaço */
+    text-align: center;
+}
+
+.carousel h2 {
+    margin-bottom: 30px;
+    font-size: 36px; /* Aumenta o tamanho da fonte */
+    color: #333;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+}
+
+/* Estilo do item do carrossel */
+.carousel-item {
+    width: 350px; /* Ajusta a largura conforme necessário */
+    height: 300px; /* Ajusta a altura */
+    margin: 0 20px; /* Aumenta o espaçamento entre os itens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 
+        -1px -1px 4px #00000085, /* Sombra superior esquerda */
+         1px -1px 4px #00000085, /* Sombra superior direita */
+        -1px  1px 4px #00000085, /* Sombra inferior esquerda */
+         1px  1px 4px #00000085; /* Sombra inferior direita */
+}
+
+.carousel-description {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    color: #333;
+}
+
+.carousel-item button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+    background-color: #555;
+}
+
+/* Botões de navegação do carrossel (setas) */
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 45%;
+    z-index: 10;
+}
+
+/* Estilo para o botão da seta */
+.carousel-btn::before {
+    content: '';
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(135deg);
+}
+
+/* Botão da esquerda (anterior) */
+.left-btn {
+    left: 15px;
+}
+
+/* Botão da direita (próximo) */
+.right-btn {
+    right: 15px;
+}
+
+.right-btn::before {
+    transform: rotate(-45deg);
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 0; /* Aumenta o padding do rodapé */
+}
